@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+    Rooms
+{% endblock %}
+{% block content %}
+    <div class="text-center fs-1 mt-5">Rooms</div>
+    <div class="row mt-5 mx-2">
+        {% for room in rooms %}
+            <div class="col-sm-4 mx-auto text-center my-3">
+                <div class="card border border-success border-5">
+                    <div class="card-body">
+                        <h5 class="card-title fs-3">{{ room.name }}</h5>
+                        <a href="{% url 'room' room.slug %}" class="btn btn-success fs-4">Join</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+{% endblock %}

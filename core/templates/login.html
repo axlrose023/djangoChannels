@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+    Sign In
+{% endblock %}
+{% block content %}
+    <div class="text-center fs-1 mt-5">Log In</div>
+    <div class="text-center col-4 mx-auto my-5">
+        <form action="." method="post" class="form-control border border-success border-5 py-3 ">
+            {% csrf_token %}
+            <div class="mb-2">
+                <label for="username" class="">Username</label>
+                <input type="text" name="username" class="form-control mt-2">
+            </div>
+            <div class="mb-2 ">
+                <label for="password" class="">Password</label>
+                <input type="text" name="password" class="form-control mt-2">
+            </div>
+            <button type="submit" class="btn btn-success mt-1 ">Log in</button>
+        </form>
+    </div>
+
+{% endblock %}
